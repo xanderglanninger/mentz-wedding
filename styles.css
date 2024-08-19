@@ -1,0 +1,2752 @@
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "poppy-shower";
+  src: url(Fonts/Poppy\ Shower.ttf);
+}
+
+@font-face {
+  font-family: "silenter";
+  src: url(Fonts/Silenter.ttf);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(+300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header - Mone de Jager and F-J Mentz */
+
+.heading-Lovers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 2%;
+}
+
+#container1 {
+  display: flex;
+  justify-content: center;
+}
+
+#heading-column1 {
+  text-align: right;
+  font-size: 30px;
+  opacity: 0;
+  animation: slideInLeft 1s ease-in forwards;
+  font-family: "poppy-shower";
+  font-weight: lighter;
+}
+
+#heading-column2 {
+  text-align: left;
+  font-size: 50px;
+  opacity: 0;
+  animation: slideInRight 1s ease-in forwards;
+  font-family: "poppy-shower";
+  font-weight: lighter;
+}
+
+.heading-surname {
+  font-size: 50px;
+}
+
+#and-sign {
+  font-size: 70px;
+  color: darkgoldenrod;
+  text-align: center;
+  font-family: "poppy-shower";
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* Menu */
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-dimmer {
+  background-color: rgba(99, 72, 6, 0.8);
+  height: 4%;
+}
+
+.navbar-font {
+  color: rgb(255, 255, 255);
+  padding-top: 0.5%;
+}
+
+/* Navbar visibility while scrolling */
+.nav-bar {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  transition-duration: 0.5s;
+  z-index: 999999;
+}
+
+.nav-bar.visible {
+  top: 0;
+}
+
+.menu-grid {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  list-style-type: none;
+  padding-bottom: 2%;
+  z-index: 10;
+}
+
+.nav-bar li {
+  text-align: center;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: darkgoldenrod;
+}
+
+/* Hover animation */
+.menu-grid :hover {
+  background-color: darkgoldenrod;
+  color: white;
+  padding-left: 3px;
+  padding-right: 3px;
+  border: 1px solid darkgoldenrod;
+  border-radius: 10px;
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* Welcome */
+
+#background-color {
+  background-color: rgb(255, 253, 248);
+  /* background-image: url(Pictures/gold\ texture.jpg); */
+  color: goldenrod;
+}
+
+#welcome-section {
+  background-image: url(Pictures/srhbzhzdhxfh.jpg);
+  background-size: cover;
+  height: 700px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reg-items-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reg-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-titlep {
+  align-self: center;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.second-heading-MentzToBe {
+  font-size: 21.5px;
+}
+
+#reg-buttonb {
+  border: none;
+  padding: 10px 20px;
+  font-size: 24px;
+  position: relative;
+  background: transparent;
+  color: goldenrod;
+  text-transform: uppercase;
+  border: 3px solid goldenrod;
+  cursor: pointer;
+  transition: all 0.7s;
+  overflow: hidden;
+  border-radius: 100px;
+  margin-top: 2%;
+}
+
+#reg-buttonb:hover {
+  color: #000;
+}
+
+.spanbutton {
+  transition: all 0.7s;
+  z-index: -1;
+}
+
+#reg-buttonb .first {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  background: goldenrod;
+}
+
+#reg-buttonb:hover .first {
+  top: 0;
+  right: 0;
+}
+
+#reg-buttonb .second {
+  content: "";
+  position: absolute;
+  left: 25%;
+  top: -100%;
+  width: 25%;
+  height: 100%;
+  background: goldenrod;
+}
+
+.reg-locationp {
+  color: white;
+  /* font-family: 'Great Vibes', cursive; */
+  font-size: 20px;
+}
+
+.reg-items-container {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* Countdown */
+
+#countdown-grid {
+  display: flex;
+  /*grid-template-columns: repeat(4, 25%);*/
+  font-family: silenter;
+  gap: 5%;
+}
+
+#countdown-container {
+  height: 180px;
+  background-color: rgb(99, 72, 6);
+  display: flex;
+  justify-content: center;
+}
+
+#countdowm-days {
+  grid-row-start: 1;
+}
+
+#countdowm-hours {
+  grid-row-start: 2;
+}
+
+#countdowm-minutes {
+  grid-row-start: 3;
+}
+
+#countdowm-seconds {
+  grid-row-start: 4;
+}
+
+.countdown-columns {
+  font-size: 20px;
+  color: white;
+  background-color: rgb(126, 92, 8);
+  height: 130px;
+  width: 130px;
+  border-radius: 100%;
+  text-align: center;
+  padding-top: 25px;
+  box-shadow: 0px 10px 10px black;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* Join-us Slogan */
+
+#sheSaidYes-Container {
+  display: flex;
+  justify-content: center;
+}
+
+#sheSaidYes-slogan {
+  background-color: rgb(99, 72, 6);
+  text-align: center;
+  height: 180px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 1075px;
+}
+
+#sheSaidYes {
+  color: white;
+  font-size: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+#dateOfAnswer {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* Our story */
+
+#our-story-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#our-story-heading {
+  font-size: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  text-align: left;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#our-story-section {
+  width: 500px;
+  margin: 2%;
+}
+
+#story-picture {
+  width: 500px;
+  margin: 2%;
+}
+
+#our-story-paragraph {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: left;
+  font-weight: lighter;
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* Information */
+.information {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.information-text1 {
+  font-size: 30px;
+  font-family: silenter;
+  font-weight: bolder;
+}
+
+.information-text2 {
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.bank-details {
+  text-align: left;
+  margin-bottom: 10%;
+  font-weight: bolder;
+}
+
+.guesthouses {
+  text-align: left;
+}
+
+.link-highlight {
+  color: darkgoldenrod;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* Gallery */
+
+#gallery-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-heading {
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 5%;
+  width: 1075px;
+  background-color: rgb(99, 72, 6);
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-heading-text {
+  color: white;
+  font-size: 45px;
+  font-weight: lighter;
+}
+
+#gallery-heading-paragraph {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  margin: 1%;
+}
+
+.med-img {
+  width: 100%;
+}
+
+.gallery-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-background-container {
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  background-size: cover;
+  width: 1075px;
+}
+
+.med-col1 {
+  display: grid;
+  grid-template-rows: repeat(2 min-content);
+}
+
+.med-col2 {
+  display: grid;
+  grid-template-rows: repeat(3 min-content);
+}
+
+.med-col3 {
+  display: grid;
+  grid-template-rows: repeat(2 min-content);
+}
+
+.med-col4 {
+  display: grid;
+  grid-template-rows: repeat(3 min-content);
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(99, 72, 6);
+  height: 150px;
+  margin-top: 10%;
+}
+footer p {
+  color: white;
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Media Qeuries */
+
+/* Greater than 1285px width and 700px length */
+
+@media (min-width: 1000px) {
+  /* Header - Mone de Jager and F-J Mentz */
+
+  .heading-Lovers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    padding-bottom: 2%;
+  }
+
+  #container1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #heading-column1 {
+    text-align: right;
+    font-size: 50px;
+  }
+
+  #heading-column2 {
+    text-align: left;
+    font-size: 50px;
+  }
+
+  .heading-surname {
+    font-size: 50px;
+  }
+
+  #and-sign {
+    font-size: 70px;
+    text-align: center;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Menu */
+
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Navbar visibility while scrolling */
+
+  .menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    font-size: 15px;
+    padding-bottom: 2%;
+  }
+
+  .nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-bar li {
+    text-align: center;
+  }
+
+  .nav-bar a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Hover animation */
+  .menu-grid :hover {
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 10px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Welcome */
+
+  #welcome-section {
+    height: 700px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reg-items-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .reg-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reg-titlep {
+    align-self: center;
+    font-size: 40px;
+    font-weight: lighter;
+  }
+
+  .second-heading-MentzToBe {
+    font-size: 21.5px;
+  }
+
+  #reg-buttonb {
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    border: 3px solid goldenrod;
+    border-radius: 100px;
+    margin-top: 2%;
+  }
+
+  #reg-buttonb .first {
+    right: 100%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+  }
+
+  #reg-buttonb:hover .first {
+    top: 0;
+    right: 0;
+  }
+
+  #reg-buttonb .second {
+    left: 25%;
+    top: -100%;
+    width: 25%;
+    height: 100%;
+  }
+
+  .reg-locationp {
+    /* font-family: 'Great Vibes', cursive; */
+    font-size: 20px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Countdown */
+
+  #countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 150px;
+  }
+
+  #countdown-container {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .countdown-columns {
+    font-size: 20px;
+    height: 130px;
+    width: 130px;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 25px;
+    box-shadow: 0px 10px 10px black;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Join-us Slogan */
+
+  #sheSaidYes-Container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #sheSaidYes-slogan {
+    text-align: center;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 1075px;
+  }
+
+  #sheSaidYes {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  #dateOfAnswer {
+    font-weight: lighter;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Our story */
+
+  #our-story-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #our-story-heading {
+    font-size: 45px;
+    font-weight: lighter;
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  #our-story-section {
+    width: 500px;
+    margin: 2%;
+  }
+
+  #story-picture {
+    width: 500px;
+    margin: 2%;
+  }
+
+  #our-story-paragraph {
+    font-size: 15px;
+    text-align: left;
+  }
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Information */
+  .information {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .information-text1 {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  .information-text2 {
+    font-size: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .bank-details {
+    text-align: left;
+    margin-bottom: 10%;
+    font-weight: bolder;
+  }
+
+  .guesthouses {
+    text-align: left;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Gallery */
+
+  #gallery-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading {
+    text-align: center;
+    margin-top: 5%;
+    width: 1075px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading-text {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  #gallery-heading-paragraph {
+    text-align: center;
+    font-size: 13px;
+    margin: 1%;
+  }
+
+  .med-img {
+    width: 100%;
+  }
+
+  .gallery-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-background-container {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    background-size: cover;
+    width: 1075px;
+  }
+
+  .med-col1 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col2 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  .med-col3 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col4 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  /*footer*/
+
+  .footer-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-heading {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 5%;
+    width: 1075px;
+    background-color: rgb(99, 72, 6);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-text {
+    color: white;
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  /*footer*/
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+  /* Header - Mone de Jager and F-J Mentz */
+
+  .heading-Lovers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    padding-bottom: 2%;
+  }
+
+  #container1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #heading-column1 {
+    text-align: right;
+    font-size: 50px;
+  }
+
+  #heading-column2 {
+    text-align: left;
+    font-size: 50px;
+  }
+
+  .heading-surname {
+    font-size: 50px;
+  }
+
+  #and-sign {
+    font-size: 70px;
+    text-align: center;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Menu */
+
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Navbar visibility while scrolling */
+
+  .menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    font-size: 15px;
+    padding-bottom: 2%;
+  }
+
+  .nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-bar li {
+    text-align: center;
+  }
+
+  .nav-bar a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Hover animation */
+  .menu-grid :hover {
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 10px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Welcome */
+
+  #welcome-section {
+    height: 700px;
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reg-items-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .reg-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reg-titlep {
+    align-self: center;
+    font-size: 40px;
+    font-weight: lighter;
+  }
+
+  .second-heading-MentzToBe {
+    font-size: 21.5px;
+  }
+
+  #reg-buttonb {
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    border: 3px solid goldenrod;
+    border-radius: 100px;
+    margin-top: 2%;
+  }
+
+  #reg-buttonb:hover {
+    color: white;
+  }
+
+  #reg-buttonb .first {
+    right: 100%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+  }
+
+  #reg-buttonb:hover .first {
+    top: 0;
+    right: 0;
+  }
+
+  #reg-buttonb .second {
+    left: 25%;
+    top: -100%;
+    width: 25%;
+    height: 100%;
+  }
+
+  .reg-locationp {
+    /* font-family: 'Great Vibes', cursive; */
+    font-size: 20px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Countdown */
+
+  #countdown-container {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #countdown-grid {
+    display: flex;
+    gap: 30px;
+  }
+
+  .countdown-columns {
+    font-size: 20px;
+    height: 130px;
+    width: 130px;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 25px;
+    box-shadow: 0px 10px 10px black;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Join-us Slogan */
+
+  #sheSaidYes-Container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #sheSaidYes-slogan {
+    text-align: center;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 1075px;
+  }
+
+  #sheSaidYes {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  #dateOfAnswer {
+    font-weight: lighter;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Our story */
+
+  #our-story-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #our-story-heading {
+    font-size: 45px;
+    font-weight: lighter;
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  #our-story-section {
+    width: 50%;
+    margin: 2%;
+  }
+
+  #story-picture {
+    width: 50%;
+    margin: 2%;
+  }
+
+  #our-story-paragraph {
+    font-size: 15px;
+    text-align: left;
+  }
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Information */
+  .information {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .information-text1 {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  .information-text2 {
+    font-size: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .bank-details {
+    text-align: left;
+    margin-bottom: 10%;
+    font-weight: bolder;
+  }
+
+  .guesthouses {
+    text-align: left;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Gallery */
+
+  #gallery-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading {
+    text-align: center;
+    margin-top: 5%;
+    width: 1075px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading-text {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  #gallery-heading-paragraph {
+    text-align: center;
+    font-size: 13px;
+    margin: 1%;
+  }
+
+  .med-img {
+    width: 100%;
+  }
+
+  .gallery-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-background-container {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    background-size: cover;
+    width: 1075px;
+  }
+
+  .med-col1 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col2 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  .med-col3 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col4 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  /*footer*/
+
+  .footer-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-heading {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 5%;
+    width: 1075px;
+    background-color: rgb(99, 72, 6);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-text {
+    color: white;
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  /*footer*/
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+  /* Header - Mone de Jager and F-J Mentz */
+
+  .heading-Lovers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    padding-bottom: 2%;
+  }
+
+  #container1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #heading-column1 {
+    text-align: right;
+    font-size: 50px;
+  }
+
+  #heading-column2 {
+    text-align: left;
+    font-size: 50px;
+  }
+
+  .heading-surname {
+    font-size: 50px;
+  }
+
+  #and-sign {
+    font-size: 70px;
+    text-align: center;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Menu */
+
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Navbar visibility while scrolling */
+
+  .menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    font-size: 15px;
+    padding-bottom: 2%;
+  }
+
+  .nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-bar li {
+    text-align: center;
+  }
+
+  .nav-bar a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Hover animation */
+  .menu-grid :hover {
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 10px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Welcome */
+
+  #welcome-section {
+    height: 700px;
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reg-items-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .reg-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reg-titlep {
+    align-self: center;
+    font-size: 40px;
+    font-weight: lighter;
+  }
+
+  .second-heading-MentzToBe {
+    font-size: 21.5px;
+  }
+
+  #reg-buttonb {
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    border: 3px solid goldenrod;
+    border-radius: 100px;
+    margin-top: 2%;
+  }
+
+  #reg-buttonb:hover {
+    color: white;
+  }
+
+  #reg-buttonb .first {
+    right: 100%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+  }
+
+  #reg-buttonb:hover .first {
+    top: 0;
+    right: 0;
+  }
+
+  #reg-buttonb .second {
+    left: 25%;
+    top: -100%;
+    width: 25%;
+    height: 100%;
+  }
+
+  .reg-locationp {
+    /* font-family: 'Great Vibes', cursive; */
+    font-size: 20px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Countdown */
+
+  #countdown-container {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #countdown-grid {
+    display: flex;
+    gap: 30px;
+  }
+
+  .countdown-columns {
+    font-size: 20px;
+    height: 130px;
+    width: 130px;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 25px;
+    box-shadow: 0px 10px 10px black;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Join-us Slogan */
+
+  #sheSaidYes-Container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #sheSaidYes-slogan {
+    text-align: center;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 1075px;
+  }
+
+  #sheSaidYes {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  #dateOfAnswer {
+    font-weight: lighter;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Our story */
+
+  #our-story-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #our-story-heading {
+    font-size: 35px;
+    font-weight: lighter;
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  #our-story-section {
+    width: 45%;
+    margin: 2%;
+  }
+
+  #story-picture {
+    width: 55%;
+    margin: 2%;
+  }
+
+  #our-story-paragraph {
+    font-size: 13px;
+    text-align: left;
+  }
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Information */
+  .information {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .information-text1 {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  .information-text2 {
+    font-size: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .bank-details {
+    text-align: left;
+    margin-bottom: 10%;
+    font-weight: bolder;
+  }
+
+  .guesthouses {
+    text-align: left;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Gallery */
+
+  #gallery-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading {
+    text-align: center;
+    margin-top: 5%;
+    width: 1075px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading-text {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  #gallery-heading-paragraph {
+    text-align: center;
+    font-size: 13px;
+    margin: 1%;
+  }
+
+  .med-img {
+    width: 100%;
+  }
+
+  .gallery-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-background-container {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    background-size: cover;
+    width: 1075px;
+  }
+
+  .med-col1 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col2 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  .med-col3 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col4 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  /*footer*/
+
+  .footer-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-heading {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 5%;
+    width: 1075px;
+    background-color: rgb(99, 72, 6);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-text {
+    color: white;
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  /*footer*/
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+  /* Header - Mone de Jager and F-J Mentz */
+
+  .heading-Lovers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    padding-bottom: 2%;
+  }
+
+  #container1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #heading-column1 {
+    text-align: right;
+    font-size: 40px;
+  }
+
+  #heading-column2 {
+    text-align: left;
+    font-size: 40px;
+  }
+
+  .heading-surname {
+    font-size: 40px;
+  }
+
+  #and-sign {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Menu */
+
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Navbar visibility while scrolling */
+
+  .menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10%px;
+    font-size: 14px;
+    padding-bottom: 2%;
+  }
+
+  .nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-bar li {
+    text-align: center;
+  }
+
+  .nav-bar a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Hover animation */
+  .menu-grid :hover {
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 10px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Welcome */
+
+  #welcome-section {
+    height: 700px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reg-items-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .reg-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reg-titlep {
+    align-self: center;
+    font-size: 35px;
+    font-weight: lighter;
+  }
+
+  .second-heading-MentzToBe {
+    font-size: 20px;
+  }
+
+  #reg-buttonb {
+    border: none;
+    padding: 10px 20px;
+    font-size: 22px;
+    border: 3px solid goldenrod;
+    border-radius: 100px;
+    margin-top: 2%;
+  }
+
+  #reg-buttonb:hover {
+    color: white;
+  }
+
+  #reg-buttonb .first {
+    right: 100%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+  }
+
+  #reg-buttonb:hover .first {
+    top: 0;
+    right: 0;
+  }
+
+  #reg-buttonb .second {
+    left: 25%;
+    top: -100%;
+    width: 25%;
+    height: 100%;
+  }
+
+  .reg-locationp {
+    /* font-family: 'Great Vibes', cursive; */
+    font-size: 20px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Countdown */
+
+  #countdown-container {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #countdown-grid {
+    display: flex;
+    gap: 30px;
+  }
+
+  .countdown-columns {
+    font-size: 15px;
+    height: 110px;
+    width: 110px;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 25px;
+    box-shadow: 0px 10px 10px black;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Join-us Slogan */
+
+  #sheSaidYes-Container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #sheSaidYes-slogan {
+    text-align: center;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 1075px;
+  }
+
+  #sheSaidYes {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  #dateOfAnswer {
+    font-weight: lighter;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Our story */
+
+  #our-story-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #our-story-heading {
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  #our-story-section {
+    width: 45%;
+    margin: 2%;
+  }
+
+  #story-picture {
+    width: 55%;
+    margin: 2%;
+  }
+
+  #our-story-paragraph {
+    font-size: 11px;
+    text-align: left;
+  }
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Information */
+  .information {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .information-text1 {
+    font-size: 25px;
+    font-weight: bolder;
+  }
+
+  .information-text2 {
+    font-size: 13px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .bank-details {
+    text-align: left;
+    margin-bottom: 10%;
+    font-weight: bolder;
+    font-size: 13px;
+  }
+
+  .guesthouses {
+    text-align: left;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Gallery */
+
+  #gallery-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading {
+    text-align: center;
+    margin-top: 5%;
+    width: 1075px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading-text {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  #gallery-heading-paragraph {
+    text-align: center;
+    font-size: 13px;
+    margin: 1%;
+  }
+
+  .med-img {
+    width: 100%;
+  }
+
+  .gallery-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-background-container {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    background-size: cover;
+    width: 1075px;
+  }
+
+  .med-col1 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col2 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  .med-col3 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col4 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  /*footer*/
+
+  .footer-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-heading {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 5%;
+    width: 1075px;
+    background-color: rgb(99, 72, 6);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-text {
+    color: white;
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  /*footer*/
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+  /* Header - Mone de Jager and F-J Mentz */
+
+  .heading-Lovers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    padding-bottom: 2%;
+  }
+
+  #container1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #heading-column1 {
+    text-align: right;
+    font-size: 30px;
+  }
+
+  #heading-column2 {
+    text-align: left;
+    font-size: 30px;
+  }
+
+  .heading-surname {
+    font-size: 25px;
+  }
+
+  #and-sign {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Menu */
+
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Navbar visibility while scrolling */
+
+  .menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    font-size: 11px;
+    padding-bottom: 2%;
+  }
+
+  .nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-bar li {
+    text-align: center;
+  }
+
+  .nav-bar a {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* Hover animation */
+  .menu-grid :hover {
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 10px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Welcome */
+
+  #welcome-section {
+    height: 500px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reg-items-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .reg-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reg-titlep {
+    align-self: center;
+    font-size: 35px;
+    font-weight: lighter;
+  }
+
+  .second-heading-MentzToBe {
+    font-size: 20px;
+  }
+
+  #reg-buttonb {
+    border: none;
+    padding: 10px 20px;
+    font-size: 22px;
+    border: 3px solid goldenrod;
+    border-radius: 100px;
+    margin-top: 2%;
+  }
+
+  #reg-buttonb:hover {
+    color: white;
+  }
+
+  #reg-buttonb .first {
+    right: 100%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+  }
+
+  #reg-buttonb:hover .first {
+    top: 0;
+    right: 0;
+  }
+
+  #reg-buttonb .second {
+    left: 25%;
+    top: -100%;
+    width: 25%;
+    height: 100%;
+  }
+
+  .reg-locationp {
+    /* font-family: 'Great Vibes', cursive; */
+    font-size: 20px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Countdown */
+
+  #countdown-container {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #countdown-grid {
+    display: flex;
+    gap: 20px;
+  }
+
+  .countdown-columns {
+    font-size: 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 25px;
+    box-shadow: 0px 10px 10px black;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Join-us Slogan */
+
+  #sheSaidYes-Container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #sheSaidYes-slogan {
+    text-align: center;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 1075px;
+  }
+
+  #sheSaidYes {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  #dateOfAnswer {
+    font-weight: lighter;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Our story */
+
+  #our-story-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #our-story-heading {
+    font-size: 25px;
+    font-weight: lighter;
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  #our-story-section {
+    width: 45%;
+    margin: 2%;
+  }
+
+  #story-picture {
+    width: 55%;
+    margin: 2%;
+  }
+
+  #our-story-paragraph {
+    font-size: 10px;
+    font-weight: 600;
+    text-align: left;
+  }
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Information */
+  .information {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .information-text1 {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .information-text2 {
+    font-size: 11px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .bank-details {
+    text-align: left;
+    margin-bottom: 10%;
+    font-weight: bolder;
+    font-size: 11px;
+  }
+
+  .guesthouses {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .guesthouses {
+    text-align: left;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Gallery */
+
+  #gallery-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading {
+    text-align: center;
+    margin-top: 5%;
+    width: 1075px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading-text {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  #gallery-heading-paragraph {
+    text-align: center;
+    font-size: 13px;
+    margin: 1%;
+  }
+
+  .med-img {
+    width: 100%;
+  }
+
+  .gallery-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-background-container {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    background-size: cover;
+    width: 1075px;
+  }
+
+  .med-col1 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col2 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  .med-col3 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col4 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  /*footer*/
+
+  .footer-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-heading {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 5%;
+    width: 1075px;
+    background-color: rgb(99, 72, 6);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-text {
+    color: white;
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  /*footer*/
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+  /* Header - Mone de Jager and F-J Mentz */
+
+  .heading-Lovers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    padding-bottom: 2%;
+  }
+
+  #container1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #heading-column1 {
+    text-align: right;
+    font-size: 25px;
+  }
+
+  #heading-column2 {
+    text-align: left;
+    font-size: 25px;
+  }
+
+  .heading-surname {
+    font-size: 20px;
+  }
+
+  #and-sign {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Menu */
+
+  .container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Navbar visibility while scrolling */
+
+  .menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    font-size: 11px;
+    padding-bottom: 2%;
+  }
+
+  .nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-bar li {
+    text-align: center;
+  }
+
+  .nav-bar a {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* Hover animation */
+  .menu-grid :hover {
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 10px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Welcome */
+
+  #welcome-section {
+    height: 500px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reg-items-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .reg-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reg-titlep {
+    align-self: center;
+    font-size: 35px;
+    font-weight: lighter;
+  }
+
+  .second-heading-MentzToBe {
+    font-size: 20px;
+  }
+
+  #reg-buttonb {
+    border: none;
+    padding: 10px 20px;
+    font-size: 22px;
+    border: 3px solid goldenrod;
+    border-radius: 100px;
+    margin-top: 2%;
+  }
+
+  #reg-buttonb:hover {
+    color: white;
+  }
+
+  #reg-buttonb .first {
+    right: 100%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+  }
+
+  #reg-buttonb:hover .first {
+    top: 0;
+    right: 0;
+  }
+
+  #reg-buttonb .second {
+    left: 25%;
+    top: -100%;
+    width: 25%;
+    height: 100%;
+  }
+
+  .reg-locationp {
+    /* font-family: 'Great Vibes', cursive; */
+    font-size: 20px;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Countdown */
+
+  #countdown-container {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #countdown-grid {
+    display: flex;
+    gap: 15px;
+  }
+
+  .countdown-columns {
+    font-size: 15px;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 25px;
+    box-shadow: 0px 10px 10px black;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Join-us Slogan */
+
+  #sheSaidYes-Container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #sheSaidYes-slogan {
+    text-align: center;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 1075px;
+  }
+
+  #sheSaidYes {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+
+  #dateOfAnswer {
+    font-weight: lighter;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+
+  /* Our story */
+
+  #our-story-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #our-story-heading {
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  #our-story-section {
+    width: 50%;
+    margin: 2%;
+  }
+
+  #story-picture {
+    width: 50%;
+    margin: 2%;
+  }
+
+  #our-story-paragraph {
+    font-size: 9px;
+    text-align: left;
+  }
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Information */
+  .information {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .information-text1 {
+    font-size: 15px;
+    font-weight: bolder;
+  }
+
+  .information-text2 {
+    font-size: 11px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .bank-details {
+    text-align: left;
+    margin-bottom: 10%;
+    font-weight: bolder;
+    font-size: 10px;
+  }
+
+  .guesthouses {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .guesthouses {
+    text-align: left;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------------------ */
+  /* Gallery */
+
+  #gallery-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading {
+    text-align: center;
+    margin-top: 5%;
+    width: 1075px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-heading-text {
+    font-size: 35px;
+    font-weight: lighter;
+  }
+
+  #gallery-heading-paragraph {
+    text-align: center;
+    font-size: 13px;
+    margin: 1%;
+  }
+
+  .med-img {
+    width: 100%;
+  }
+
+  .gallery-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-background-container {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    background-size: cover;
+    width: 1075px;
+  }
+
+  .med-col1 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col2 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  .med-col3 {
+    display: grid;
+    grid-template-rows: repeat(2 min-content);
+  }
+
+  .med-col4 {
+    display: grid;
+    grid-template-rows: repeat(3 min-content);
+  }
+
+  /*footer*/
+
+  .footer-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-heading {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 5%;
+    width: 1075px;
+    background-color: rgb(99, 72, 6);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-text {
+    color: white;
+    font-size: 35px;
+    font-weight: lighter;
+  }
+
+  /*footer*/
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+}
+
+/* Greater than 1285px width and 700px length */
+
+/* Media Qeuries */
